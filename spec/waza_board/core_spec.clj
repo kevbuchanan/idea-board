@@ -15,21 +15,21 @@
 
   (around [it] (with-test-db it))
 
-  (describe "GET /projects"
+  (describe "GET /api/projects"
     (it "returns 200"
-      (let [response (do-get "/projects")]
+      (let [response (do-get "/api/projects")]
         (should= 200 (:status response))))
 
     (it "returns all projects as json"
       (create-project {:name "the name"})
-      (let [response (do-get "/projects")
+      (let [response (do-get "/api/projects")
             projects (c/parse-string (:body response))]
         (should= 1 (count projects))))
   )
 
-  (describe "POST /projects"
+  (describe "POST /api/projects"
     (it "creates a project"
-      (do-post "/projects" {:name "My project"})
+      (do-post "/api/projects" {:name "My project"})
       (should= "My project" (:name (first (all-projects)))))
   )
 )
