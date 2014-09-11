@@ -22,7 +22,7 @@
   [:head
     [:title "Waza Board"]]
   [:body
-    (include-js "/javascripts/app.js")])
+    (include-js "/app.js")])
 
 (defroutes app
   (context "/api" []
@@ -37,7 +37,7 @@
 
 (def handler
   (-> app
-    (wrap-file "src/assets")
+    (wrap-file "client/src")
     wrap-params
     wrap-keyword-params
     wrap-json-body
