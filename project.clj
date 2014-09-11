@@ -1,6 +1,5 @@
-(defproject waza-board "0.1.0"
-  :description "Waza Board"
-  :url         "http://example.com/FIXME"
+(defproject idea-board "0.1.0"
+  :description "Idea Board"
 
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
@@ -21,6 +20,6 @@
 
   :profiles {:dev {:dependencies [[speclj "3.1.0"]
                                   [ring/ring-devel "1.2.2"]]
-                   :main "waza-board.core"}}
+                   :main "idea-board.core"}}
   :plugins [[speclj "3.1.0"]]
   :test-paths ["spec"])

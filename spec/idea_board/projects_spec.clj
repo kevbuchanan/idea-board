@@ -1,7 +1,7 @@
-(ns waza-board.projects-spec
+(ns idea-board.projects-spec
   (:require [speclj.core            :refer :all]
-            [waza-board.spec-helper :refer :all]
-            [waza-board.projects    :refer :all]))
+            [idea-board.spec-helper :refer :all]
+            [idea-board.projects    :refer :all]))
 
 (defn make-project [& attrs]
   (let [default-attrs {:name "Name" :description "Desc" :author "Author"}]

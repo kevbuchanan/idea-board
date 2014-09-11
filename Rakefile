@@ -4,7 +4,7 @@ require 'sequel_rake_tasks'
 
 ROOT = File.expand_path('..', __FILE__)
 
-env = ENV['WAZA_ENV'] || 'development'
+env = ENV['APP_ENV'] || 'development'
 jdbc_db_config_filename = File.join(ROOT, "resources", "config", "db.clj")
 jdbc_db_config = EDN.read(File.read(jdbc_db_config_filename))[env.to_sym]
 

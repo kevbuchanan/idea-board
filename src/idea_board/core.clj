@@ -1,4 +1,4 @@
-(ns waza-board.core
+(ns idea-board.core
   (:require [korma.db                       :refer [mysql defdb]]
             [compojure.core                 :refer :all]
             [compojure.route                :refer [not-found]]
@@ -10,8 +10,8 @@
             [ring.middleware.json           :refer :all]
             [ring.middleware.params         :refer [wrap-params]]
             [ring.middleware.keyword-params :refer [wrap-keyword-params]]
-            [waza-board.projects            :refer :all]
-            [waza-board.config              :refer [read-config]]))
+            [idea-board.projects            :refer :all]
+            [idea-board.config              :refer [read-config]]))
 
 (def ^:private db-config
   (delay (:development (read-config "db.clj"))))

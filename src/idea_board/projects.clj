@@ -1,4 +1,4 @@
-(ns waza-board.projects
+(ns idea-board.projects
   (:require [korma.core :as k]))
 
 (k/defentity projects

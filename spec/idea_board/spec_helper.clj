@@ -1,6 +1,6 @@
-(ns waza-board.spec-helper
+(ns idea-board.spec-helper
   (:require [korma.db :as db]
-            [waza-board.config :refer [read-config]]))
+            [idea-board.config :refer [read-config]]))
 
 (def test-db (atom nil))
 

@@ -1,9 +1,9 @@
-(ns waza-board.core-spec
+(ns idea-board.core-spec
   (:require [speclj.core            :refer :all]
             [cheshire.core          :as c]
-            [waza-board.projects    :refer :all]
-            [waza-board.spec-helper :refer :all]
-            [waza-board.core        :refer :all]))
+            [idea-board.projects    :refer :all]
+            [idea-board.spec-helper :refer :all]
+            [idea-board.core        :refer :all]))
 
 (defn do-get [route]
   (handler {:request-method :get :uri route}))
