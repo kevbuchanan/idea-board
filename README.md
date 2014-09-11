@@ -1,6 +1,6 @@
-# Waza Board
+# Idea Board
 
-Share notes on ideas for waza projects.
+Share notes on ideas for projects.
 
 ## Setup
 

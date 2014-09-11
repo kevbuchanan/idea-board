@@ -2,8 +2,9 @@
   "name": "waza-board",
   "version": "0.1.0",
   "dependencies": {
-    "backbone" : ">0.0.1",
-    "underscore" : ">0.0.1"
+    "backbone": ">0.0.1",
+    "underscore": ">0.0.1",
+    "jquery": ">0.0.1"
   },
   "devDependencies": {
     "grunt": ">0.0.1",

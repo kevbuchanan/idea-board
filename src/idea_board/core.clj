@@ -20,7 +20,7 @@
 
 (defhtml index-html []
   [:head
-    [:title "Waza Board"]
+    [:title "Idea Board"]
     (include-css "/app.css")]
   [:body
     (include-js "/app.js")])

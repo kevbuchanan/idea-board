@@ -11,3 +11,5 @@ pom.xml
 .lein-repl-history
 /node_modules
 /.grunt
+/resources/assets
+Gemfile.lock

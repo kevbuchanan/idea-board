@@ -1,1 +1,2 @@
-require("./projects/index")
+var $ = require("jquery")
+var Backbone = require("backbone")
