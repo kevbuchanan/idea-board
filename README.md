@@ -22,3 +22,12 @@ $ APP_ENV=test bundle exec rake db:create db:migrate
 ```bash
 $ lein spec
 ```
+
+## Client App
+
+Build and run specs:
+
+```bash
+$ npm install
+$ grunt
+```
