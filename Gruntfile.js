@@ -1,14 +1,38 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-      jasmine: {
-        src: 'client/src/**/*.js',
-        options: {
-          specs: 'client/spec/**/*spec.js'
-        }
+    pkg: grunt.file.readJSON("package.json"),
+
+    uglify: {
+      options: {
+        banner: "/*! <%= pkg.name %> <%= grunt.template.today('yyyy-mm-dd') %> */\n"
+      },
+      build: {
+        src: "client/app/**/*.js",
+        dest: "resources/assets/app.js"
       }
-    })
+    },
 
-  grunt.loadNpmTasks('grunt-contrib-jasmine')
+    jasmine_node: {
+      options: {
+        specNameMatcher: "spec"
+      },
+      all: ["client/spec/"]
+    },
 
-  grunt.registerTask('default', 'jasmine')
+    browserify: {
+      "resources/assets/app.js": ["client/app/app.js"]
+    },
+
+    watch: {
+      files: ["client/**/*.js"],
+      tasks: ["default"]
+    },
+  })
+
+  grunt.loadNpmTasks("grunt-browserify")
+  grunt.loadNpmTasks("grunt-contrib-watch")
+  grunt.loadNpmTasks("grunt-jasmine-node");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
+
+  grunt.registerTask("default", ["browserify", "jasmine_node"]);
 }
