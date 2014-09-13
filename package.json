@@ -1,5 +1,5 @@
 {
-  "name": "waza-board",
+  "name": "idea-board",
   "version": "0.1.0",
   "dependencies": {
     "backbone": ">0.0.1",
